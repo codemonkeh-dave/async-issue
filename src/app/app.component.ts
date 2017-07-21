@@ -28,28 +28,15 @@ export class AppComponent {
 
 		let self = this;
 		this.report.loadFile('/assets/reports/testreport.mrt');
-		//self.report.dictionary.variables.getByName("ReportTitleLabel").valueObject = this.l("VisitExceptionsReport");
 
+		// bind to parameter input change
 		this.viewer.onInteraction = function(e)
         {
            self.loadReportData(e.variables.IntegerInput);
-
         };
 
 		this.viewer.report = this.report;
-
-
 		this.loadReportData(10); // default load
-		// this.viewer.onInteraction = function (e) {
-		//   self.loadReportData(moment(e.variables.StartDateTime),
-		//     moment(e.variables.EndDateTime),
-		//     e.variables.MaxVisits);
-
-		// };
-
-
-
-
 	}
 
 	loadReportData(integerInput) {
@@ -59,13 +46,13 @@ export class AppComponent {
 
 		self.report.dictionary.variables.getByName("IntegerInput").valueObject = integerInput;
 
-		// get data (simulate taking seconds)
-
+		// get data (simulate taking 5 seconds)
 		console.log('start loading data');
 		setTimeout(function () {
 			console.log('end loading data');
 			var jsonArray = [];
 
+			// create fake data
 			for (var i = 0; i < integerInput; i++) {
 				jsonArray.push(
 					{
@@ -87,7 +74,7 @@ export class AppComponent {
 		this.dataSet.readJson(JSON.stringify(jsonArray));
 		this.report.regData("test123", "test123", this.dataSet);
 		this.viewer.renderHtml('viewer');
-		this.report.render(); //whole report refreshes here instead of just showing data
+		//this.report.render(); //whole report refreshes here instead of just showing data
 	}
 
 
