@@ -74,7 +74,7 @@ export class AppComponent {
 		this.dataSet.readJson(JSON.stringify(jsonArray));
 		this.report.regData("test123", "test123", this.dataSet);
 		this.viewer.renderHtml('viewer');
-		//this.report.render(); //whole report refreshes here instead of just showing data
+		this.report.render(); //whole report refreshes here instead of just showing data
 	}
 
 
