@@ -16,8 +16,12 @@ export class AppComponent {
 
 	ngAfterViewInit() {
 
-		this.loadReport();
 		this.viewer.renderHtml('viewer');
+		
+		//ignore hide spinner
+		this.viewer.jsObject.controls.processImage.hide = function(){}; 
+		
+		this.loadReport();
 	}
 
 	ngOnInit() {
@@ -32,9 +36,12 @@ export class AppComponent {
 		// bind to parameter input change
 		this.viewer.onInteraction = function(e)
         {
-           self.loadReportData(e.variables.IntegerInput);
+            self.loadReportData(e.variables.IntegerInput);
+		    
+			//ignore hide spinner
+			this.jsObject.controls.processImage.hide = function(){};
         };
-
+		
 		this.viewer.report = this.report;
 		this.loadReportData(10); // default load
 	}
@@ -63,7 +70,14 @@ export class AppComponent {
 			}
 
 			self.bindData(jsonArray);
-
+			
+			//return hide spinner to default
+			if (this.viewer.jsObject){
+				this.jsObject.controls.processImage.hide = function(){
+					this.style.display = "none";				
+				};
+				this.viewer.jsObject.controls.processImage.hide();
+			}
 		}, 5000);
 
 	}
