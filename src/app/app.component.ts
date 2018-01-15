@@ -69,7 +69,20 @@ export class AppComponent {
 				);
 			}
 
-			self.bindData(jsonArray);
+			var json = {
+				"DataSource":
+				[
+					{"userId":"test", "title":"123"},
+					{"userId":"test2", "title":"456"},
+				],
+				"DataSource2":
+				[
+					{"age":"test3"},
+					{"age":"test4"},
+				]
+			};
+
+			self.bindData(json);
 			
 			//return hide spinner to default
 			if (this.viewer.jsObject){
@@ -78,15 +91,16 @@ export class AppComponent {
 				};
 				this.viewer.jsObject.controls.processImage.hide();
 			}
-		}, 5000);
+		}, 500);
 
 	}
 
-	bindData(jsonArray) {
+	bindData(json) {
 		console.log('binding data');
 		this.dataSet = new Stimulsoft.System.Data.DataSet("test123");
-		this.dataSet.readJson(JSON.stringify(jsonArray));
+		this.dataSet.readJson(JSON.stringify(json));
 		this.report.regData("test123", "test123", this.dataSet);
+		this.report.dictionary.synchronize();
 		this.viewer.renderHtml('viewer');
 		this.report.render(); //whole report refreshes here instead of just showing data
 	}

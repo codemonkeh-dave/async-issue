@@ -1,1 +1,348 @@
-{"ReportVersion":"2017.1.4","ReportGuid":"935276f4b77ae8e5008edceceacb8599","ReportName":"Report","ReportAlias":"Report","ReportFile":"testreport.mrt","ReportCreated":"/Date(0+0000)/","ReportChanged":"/Date(0+0000)/","EngineVersion":"EngineV2","CalculationMode":"Interpretation","Dictionary":{"Variables":{"0":{"Value":"10","Name":"IntegerInput","DialogInfo":{"DateTimeType":"DateAndTime"},"Alias":"IntegerInput","Type":"System.Int32","RequestFromUser":true}},"DataSources":{"0":{"Ident":"StiDataTableSource","Name":"DataSource","Alias":"DataSource","Columns":{"0":{"Name":"userId","Index":-1,"NameInSource":"userId","Alias":"userId","Type":"System.String"},"1":{"Name":"title","Index":-1,"NameInSource":"title","Alias":"title","Type":"System.String"}},"NameInSource":"test123"}}},"Pages":{"0":{"Ident":"StiPage","Name":"Page1","Guid":"1a49835996b348a9aa37e18d4291c4d1","Interaction":{"Ident":"StiInteraction"},"Border":";;2;;;;;solid:Black","Brush":"solid:Transparent","Components":{"0":{"Ident":"StiPageHeaderBand","Name":"PageHeaderBand1","ClientRectangle":"0,0.4,21,3.8","Interaction":{"Ident":"StiInteraction"},"Border":";;;;;;;solid:Black","Brush":"solid:Transparent","Components":{"0":{"Ident":"StiText","Name":"Text11","Guid":"69d5931503ef4a4db1afa12db5d93001","MinSize":"0,0","MaxSize":"0,0","ClientRectangle":"0,-0.4,21,2.8","Interaction":{"Ident":"StiInteraction"},"HorAlignment":"Center","VertAlignment":"Center","Font":"Verdana;11.25;;","Border":";;;;;;;solid:Black","Brush":"solid:18,148,202","TextBrush":"solid:White","Type":"Expression"},"1":{"Ident":"StiText","Name":"Text5","Guid":"fe998ccf8784442aaff4ae07eb314f67","MinSize":"0,0","MaxSize":"0,0","ClientRectangle":"0.4,0.4,11.2,1.2","Interaction":{"Ident":"StiInteraction"},"Text":{"Value":"Test Report"},"Font":"Verdana;24;;","Border":";;;;;;;solid:Black","Brush":"solid:Transparent","TextBrush":"solid:White","Type":"Expression"}}},"1":{"Ident":"StiPageFooterBand","Name":"PageFooterBand1","ClientRectangle":"0,28.4,21,1.3","Interaction":{"Ident":"StiInteraction"},"Border":";;;;;;;solid:Black","Brush":"solid:Transparent","Components":{"0":{"Ident":"StiText","Name":"Text13","Guid":"77c97a0b2a054a559e1709fa70fe03bd","MinSize":"0,0","MaxSize":"0,0","ClientRectangle":"0,0.1,21,1.2","Interaction":{"Ident":"StiInteraction"},"VertAlignment":"Center","Font":"Verdana;11.25;;","Border":";;;;;;;solid:Black","Brush":"solid:18,148,202","TextBrush":"solid:White","Type":"Expression"},"1":{"Ident":"StiText","Name":"Text10","Guid":"606cf788b6ce428f92d610dec31ee1f4","MinSize":"0,0","MaxSize":"0,0","ClientRectangle":"1.4,0.1,7.6,1.1","Interaction":{"Ident":"StiInteraction"},"Text":{"Value":"Footer"},"VertAlignment":"Center","Font":"Verdana;12;;","Border":";;;;;;;solid:Black","Brush":"solid:18,148,202","TextBrush":"solid:White","Type":"Expression"}}},"2":{"Ident":"StiDataBand","Name":"DataBand1","ClientRectangle":"0,5,21,0.8","Interaction":{"Ident":"StiBandInteraction"},"Border":";;;;;;;solid:Black","Brush":"solid:Transparent","Components":{"0":{"Ident":"StiText","Name":"Text1","MinSize":"0,0","MaxSize":"0,0","ClientRectangle":"3.6,0.2,16.6,0.6","Interaction":{"Ident":"StiInteraction"},"Text":{"Value":"{DataSource.title}"},"Border":";;;;;;;solid:Black","Brush":"solid:Transparent","TextBrush":"solid:Black"},"1":{"Ident":"StiText","Name":"Text2","MinSize":"0,0","MaxSize":"0,0","ClientRectangle":"0.4,0.2,3,0.6","Interaction":{"Ident":"StiInteraction"},"Text":{"Value":"{DataSource.userId}"},"Border":";;;;;;;solid:0,0,0","Brush":"solid:Transparent","TextBrush":"solid:0,0,0"}},"DataSourceName":"DataSource"}},"PaperSize":"A4","PageWidth":21,"PageHeight":29.7,"Watermark":{"TextBrush":"solid:50,0,0,0"},"Margins":{"Left":0,"Right":0,"Top":0,"Bottom":0}}}}
+{
+  "ReportVersion": "2017.2.4.0",
+  "ReportGuid": "385e36368d7642038bfa755cf8a6167e",
+  "ReportName": "Report",
+  "ReportAlias": "Report",
+  "ReportCreated": "/Date(0+0000)/",
+  "ReportChanged": "/Date(1516016690773+0000)/",
+  "EngineVersion": "EngineV2",
+  "CalculationMode": "Interpretation",
+  "Script": "using System;\r\nusing System.Drawing;\r\nusing System.Windows.Forms;\r\nusing System.Data;\r\nusing Stimulsoft.Controls;\r\nusing Stimulsoft.Base.Drawing;\r\nusing Stimulsoft.Report;\r\nusing Stimulsoft.Report.Dialogs;\r\nusing Stimulsoft.Report.Components;\r\n\r\nnamespace Reports\r\n{\r\n    public class Report : Stimulsoft.Report.StiReport\r\n    {\r\n        public Report()        {\r\n            this.InitializeComponent();\r\n        }\r\n\r\n        #region StiReport Designer generated code - do not modify\r\n\t\t#endregion StiReport Designer generated code - do not modify\r\n    }\r\n}\r\n",
+  "ReferencedAssemblies": {
+    "0": "System.Dll",
+    "1": "System.Drawing.Dll",
+    "2": "System.Windows.Forms.Dll",
+    "3": "System.Data.Dll",
+    "4": "System.Xml.Dll",
+    "5": "Stimulsoft.Controls.Dll",
+    "6": "Stimulsoft.Base.Dll",
+    "7": "Stimulsoft.Report.Dll"
+  },
+  "Dictionary": {
+    "Variables": {
+      "0": {
+        "Value": "10",
+        "Name": "IntegerInput",
+        "DialogInfo": {
+          "DateTimeType": "DateAndTime"
+        },
+        "Alias": "IntegerInput",
+        "Type": "System.Int32",
+        "RequestFromUser": true
+      }
+    },
+    "DataSources": {
+      "0": {
+        "Ident": "StiDataTableSource",
+        "Name": "DataSource",
+        "Alias": "DataSource",
+        "Columns": {
+          "0": {
+            "Name": "title",
+            "Index": -1,
+            "NameInSource": "title",
+            "Alias": "title",
+            "Type": "System.String"
+          },
+          "1": {
+            "Name": "userId",
+            "Index": -1,
+            "NameInSource": "userId",
+            "Alias": "userId",
+            "Type": "System.String"
+          }
+        },
+        "NameInSource": "test123"
+      },
+      "1": {
+        "Ident": "StiDataTableSource",
+        "Name": "DataSource2",
+        "Alias": "DataSource2",
+        "Columns": {
+          "0": {
+            "Name": "age",
+            "Index": -1,
+            "NameInSource": "age",
+            "Alias": "age",
+            "Type": "System.String"
+          }
+        },
+        "NameInSource": "test123"
+      }
+    }
+  },
+  "Pages": {
+    "0": {
+      "Ident": "StiPage",
+      "Name": "Page1",
+      "Guid": "1a49835996b348a9aa37e18d4291c4d1",
+      "Interaction": {
+        "Ident": "StiInteraction"
+      },
+      "Border": ";;2;;;;;solid:Black",
+      "Brush": "solid:",
+      "Components": {
+        "0": {
+          "Ident": "StiPageHeaderBand",
+          "Name": "PageHeaderBand1",
+          "ClientRectangle": "0,0.4,21,3.8",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Text11",
+              "Guid": "69d5931503ef4a4db1afa12db5d93001",
+              "MinSize": "0,0",
+              "MaxSize": "0,0",
+              "ClientRectangle": "0,-0.4,21,2.8",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "HorAlignment": "Center",
+              "VertAlignment": "Center",
+              "Font": "Verdana;11.25;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:18,148,202",
+              "TextBrush": "solid:White",
+              "Type": "Expression"
+            },
+            "1": {
+              "Ident": "StiText",
+              "Name": "Text5",
+              "Guid": "fe998ccf8784442aaff4ae07eb314f67",
+              "MinSize": "0,0",
+              "MaxSize": "0,0",
+              "ClientRectangle": "0.4,0.4,11.2,1.2",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Test Report"
+              },
+              "Font": "Verdana;24;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:White",
+              "Type": "Expression"
+            }
+          }
+        },
+        "1": {
+          "Ident": "StiPageFooterBand",
+          "Name": "PageFooterBand1",
+          "ClientRectangle": "0,28.4,21,1.3",
+          "Interaction": {
+            "Ident": "StiInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Text13",
+              "Guid": "77c97a0b2a054a559e1709fa70fe03bd",
+              "MinSize": "0,0",
+              "MaxSize": "0,0",
+              "ClientRectangle": "0,0.1,21,1.2",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "VertAlignment": "Center",
+              "Font": "Verdana;11.25;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:18,148,202",
+              "TextBrush": "solid:White",
+              "Type": "Expression"
+            },
+            "1": {
+              "Ident": "StiText",
+              "Name": "Text10",
+              "Guid": "606cf788b6ce428f92d610dec31ee1f4",
+              "MinSize": "0,0",
+              "MaxSize": "0,0",
+              "ClientRectangle": "1.4,0.1,7.6,1.1",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "Footer"
+              },
+              "VertAlignment": "Center",
+              "Font": "Verdana;12;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:18,148,202",
+              "TextBrush": "solid:White",
+              "Type": "Expression"
+            }
+          }
+        },
+        "2": {
+          "Ident": "StiTable",
+          "Name": "TableDataSource",
+          "ClientRectangle": "0,5,21,1.6",
+          "Interaction": {
+            "Ident": "StiBandInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiTableCell",
+              "Name": "TableDataSource_Cell1",
+              "MinSize": "0,0",
+              "MaxSize": "0,0",
+              "ClientRectangle": "0,0,10.6,0.8",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "title"
+              },
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 0
+            },
+            "1": {
+              "Ident": "StiTableCell",
+              "Name": "TableDataSource_Cell2",
+              "MinSize": "0,0",
+              "MaxSize": "0,0",
+              "ClientRectangle": "10.6,0,10.4,0.8",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "userId"
+              },
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 1
+            },
+            "2": {
+              "Ident": "StiTableCell",
+              "Name": "TableDataSource_Cell3",
+              "MinSize": "0,0",
+              "MaxSize": "0,0",
+              "ClientRectangle": "0,0.8,10.6,0.8",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{DataSource.title}"
+              },
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 2
+            },
+            "3": {
+              "Ident": "StiTableCell",
+              "Name": "TableDataSource_Cell4",
+              "MinSize": "0,0",
+              "MaxSize": "0,0",
+              "ClientRectangle": "10.6,0.8,10.4,0.8",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{DataSource.userId}"
+              },
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 3
+            }
+          },
+          "MinHeight": 0.4,
+          "DataSourceName": "DataSource",
+          "RowCount": 2,
+          "ColumnCount": 2,
+          "HeaderRowsCount": 1,
+          "NumberID": 4
+        },
+        "3": {
+          "Ident": "StiTable",
+          "Name": "TableDataSource2",
+          "ClientRectangle": "0,7.4,21,1.6",
+          "Interaction": {
+            "Ident": "StiBandInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiTableCell",
+              "Name": "TableDataSource2_Cell1",
+              "MinSize": "0,0",
+              "MaxSize": "0,0",
+              "ClientRectangle": "0,0,21,0.8",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "age"
+              },
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 0
+            },
+            "1": {
+              "Ident": "StiTableCell",
+              "Name": "TableDataSource2_Cell2",
+              "MinSize": "0,0",
+              "MaxSize": "0,0",
+              "ClientRectangle": "0,0.8,21,0.8",
+              "Restrictions": "AllowMove, AllowSelect, AllowChange",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{DataSource2.age}"
+              },
+              "Font": ";9;;",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:White",
+              "TextBrush": "solid:Black",
+              "ID": 1
+            }
+          },
+          "MinHeight": 0.4,
+          "DataSourceName": "DataSource2",
+          "RowCount": 2,
+          "ColumnCount": 1,
+          "HeaderRowsCount": 1,
+          "NumberID": 2
+        }
+      },
+      "PaperSize": "A4",
+      "PageWidth": 21.0,
+      "PageHeight": 29.7,
+      "Watermark": {
+        "TextBrush": "solid:50,0,0,0"
+      },
+      "Margins": {
+        "Left": 0.0,
+        "Right": 0.0,
+        "Top": 0.0,
+        "Bottom": 0.0
+      }
+    }
+  }
+}
