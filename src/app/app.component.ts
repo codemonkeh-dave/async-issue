@@ -99,6 +99,7 @@ export class AppComponent {
 		console.log('binding data');
 		this.dataSet = new Stimulsoft.System.Data.DataSet("test123");
 		this.dataSet.readJson(JSON.stringify(json));
+		this.report.dictionary.clear();
 		this.report.regData("test123", "test123", this.dataSet);
 		this.report.dictionary.synchronize();
 		this.viewer.renderHtml('viewer');
