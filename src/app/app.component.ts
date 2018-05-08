@@ -1,5 +1,3 @@
-/// <reference path="../assets/reports/scripts/stimulsoft.reports.d.ts" />
-
 import { Component } from '@angular/core';
 
 declare var Stimulsoft: any;
