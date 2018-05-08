@@ -10,10 +10,10 @@ declare var Stimulsoft: any;
 export class AppComponent {
 	title = 'app';
 
-	options: Stimulsoft.Viewer.StiViewerOptions = new Stimulsoft.Viewer.StiViewerOptions();
-	viewer: Stimulsoft.Viewer.StiViewer = new Stimulsoft.Viewer.StiViewer(this.options, 'StiViewer', false);
-	report: Stimulsoft.Report.StiReport = new Stimulsoft.Report.StiReport();
-	dataSet: Stimulsoft.System.Data.DataSet = new Stimulsoft.System.Data.DataSet("Dataset1");
+	options = new Stimulsoft.Viewer.StiViewerOptions();
+	viewer = new Stimulsoft.Viewer.StiViewer(this.options, 'StiViewer', false);
+	report = new Stimulsoft.Report.StiReport();
+	dataSet = new Stimulsoft.System.Data.DataSet("Dataset1");
 
 	ngAfterViewInit() {
 
